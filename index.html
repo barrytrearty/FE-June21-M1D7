@@ -122,7 +122,7 @@
               h1.innerText = "Barry's Happy Happy Summer Store"
             }
             const changeBackgroundColor = function(){
-              body.style.backgroundColor = "yellow"
+              body.style.backgroundColor = "#FFD700"
             }
             const changeFooter = function(){
               footer.innerText="Find us on 420 Sixty Nine Street, Las Vegas"
@@ -138,13 +138,27 @@
               }
             }
 
+
+      //Change price color function
+            const createHexadecimalValue = function(){
+              let hexadecimels = ["0","1","2","3","4","5","6","7","8","9", "A", "B", "C", "D", "E", "F" ]
+                let hexadecimelValue = "";
+                let randomNumber;
+                  for(i=0; i<6; i++){
+                    randomNumber = Math.floor(Math.random()*16)
+                    let singleValue = hexadecimels[randomNumber];
+                    hexadecimelValue +=singleValue;
+                    console.log(hexadecimelValue);
+                  }return hexadecimelValue.toString()
+                }
+
             const changePriceColor = function(){
-              let colorArray = ["Black", "Aqua", "Aquamarine", "Azure", "White", "SlateBlue", "Red"]
-              let randomNumber = Math.floor(Math.random()*7)
               for(let price of prices){
-                price.style.color = colorArray[randomNumber]
+                price.style.color = `#${createHexadecimalValue()}`
               }
-            }
+                }
+
+
 
         //Styling
         const changeImageSize = function(){
