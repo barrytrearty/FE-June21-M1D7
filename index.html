@@ -148,13 +148,20 @@
                     randomNumber = Math.floor(Math.random()*16)
                     let singleValue = hexadecimels[randomNumber];
                     hexadecimelValue +=singleValue;
-                    console.log(hexadecimelValue);
-                  }return hexadecimelValue.toString()
+                  }console.log(hexadecimelValue);
+                  return hexadecimelValue.toString()
                 }
 
+            // const changePriceColor = function(){
+            //   for(let price of prices){
+            //     price.style.color = `#${createHexadecimalValue()}`
+            //   }
+            //     }
+
             const changePriceColor = function(){
+              let randomColor = `#${createHexadecimalValue()}`
               for(let price of prices){
-                price.style.color = `#${createHexadecimalValue()}`
+                price.style.color = randomColor
               }
                 }
 
