@@ -9,23 +9,55 @@
       .cssClassImage {
         visibility: hidden;
       }
+
+      .phone-box {
+        width: 300px;
+        text-align: center;
+        background-color: white;
+        margin: auto;
+      }
+
+      .phone-box img {
+        height: 100%;
+        width: auto;
+        color: black;
+        background-color: white;
+      }
+
+      .phone-box h3,
+      h4 {
+        margin: 0;
+        padding: 5px;
+        font-size: 20px;
+      }
+
+      .phone-box:hover {
+        color: white;
+        background-color: rgba(0, 0, 0, 0.5);
+      }
     </style>
   </head>
   <body>
     <h1 id="h1">The Sad, Sad Smartphone Store</h1>
-    <button onclick="welcome()">Welcome</button>
+    <button onclick="changeBackgroundColorRandomly()">Not your vibe</button>
 
     <div id="container">
       <h2>Our Best Selling Products</h2>
 
+      <div class="phone-box">
+        <h3>iPhone</h3>
+        <img src="storeImages/iphone.png" alt="iphone" />
+        <h4>Price</h4>
+      </div>
+
       <table id="table">
         <tbody>
-          <tr id="tableHeader">
+          <!-- <tr id="tableHeader">
             <th>Image</th>
             <th>Title</th>
             <th>Description</th>
             <th onclick="changePriceColor()">Price</th>
-          </tr>
+          </tr> -->
           <tr id="product1" class="product">
             <td>
               <img src="storeImages/galaxy.png" alt="galaxy" />
@@ -157,15 +189,13 @@
                const prices = document.getElementsByClassName("price")
                const table = document.getElementById("table")
                const descriptions = document.getElementsByClassName("description")
+               const phoneBox = document.getElementsByClassName("phone-box")
 
          //Functions
                const changeH1Text = function(){
                  h1.innerText = "The Happy Happy Smartphone Store"
                }
-               const changeBackgroundColor = function(){
-                 body.style.background = "linear-gradient(360deg, #259bd1, #8b6a8a)"
-                 body.style.backgroundColor = "#FFD700"
-               }
+
                const changeFooter = function(){
                  footer.innerText="Find us on 420 Sixty Nine Street, Las Vegas"
                }
@@ -188,7 +218,7 @@
            }
           const addSomeStyle = function(){
              body.style.textAlign ="center"
-             body.style.fontFamily = "Arial"
+             body.style.fontFamily = "'Lato', 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif";
              body.style.fontSize = "20px"
              footer.style.fontSize = "20px"
              footer.style.fontWeight = "bold"
@@ -201,9 +231,11 @@
              }
            }
 
+
            changeImageSize();
-           toggleImage()
+          //  toggleImage()
            alignDescriptions()
+           addSomeStyle()
 
 
 
@@ -227,15 +259,22 @@
                  }
                    }
 
+                     //  const changeBackgroundColor = function(){
+              //    body.style.background = "linear-gradient(360deg, #259bd1, #8b6a8a)"
+              //  }
 
+              const changeBackgroundColorRandomly = function(){
+                let randomBgColor = `linear-gradient(360deg, #${createHexadecimalValue()}, #${createHexadecimalValue()})`
+                body.style.background = randomBgColor;
+              }
 
           //Welcome function invokes all the functions
                const welcome = function(){
                changeH1Text()
                addClassToLinks()
                changeBackgroundColor()
-               toggleImage()
-               addSomeStyle()
+              //  toggleImage()
+              //  addSomeStyle()
              }
     </script>
   </body>
