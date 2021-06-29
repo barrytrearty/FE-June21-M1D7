@@ -13,11 +13,11 @@
   </head>
   <body>
     <h1 id="h1">Barry's Sad, Sad Winter Store</h1>
-
     <button onclick="welcome()">Welcome</button>
 
     <div id="container">
       <h2>Our Best Selling Products</h2>
+
       <table id="table">
         <tbody>
           <tr id="tableHeader">
@@ -28,11 +28,7 @@
           </tr>
           <tr id="product1" class="product">
             <td>
-              <img
-                src="storeImages/sunglasses.png"
-                alt="sunglasses"
-                class="cssClassImage"
-              />
+              <img src="storeImages/sunglasses.png" alt="sunglasses" />
             </td>
             <td>
               <a
@@ -42,15 +38,11 @@
               >
             </td>
             <td>To protect our beautiful eyes</td>
-            <td>€20</td>
+            <td class="price">€20</td>
           </tr>
           <tr id="product2" class="product">
             <td>
-              <img
-                src="storeImages/sunscreen.png"
-                alt="sunscreen"
-                class="cssClassImage"
-              />
+              <img src="storeImages/sunscreen.png" alt="sunscreen" />
             </td>
 
             <td>
@@ -61,11 +53,11 @@
               >
             </td>
             <td>To protect our beautiful skin</td>
-            <td>€5</td>
+            <td class="price">€5</td>
           </tr>
           <tr id="product3" class="product">
             <td>
-              <img src="storeImages/cap.png" alt="cap" class="cssClassImage" />
+              <img src="storeImages/cap.png" alt="cap" />
             </td>
             <td>
               <a
@@ -74,15 +66,11 @@
               >
             </td>
             <td>To protect our heads</td>
-            <td>€12</td>
+            <td class="price">€12</td>
           </tr>
           <tr id="product4" class="product">
             <td>
-              <img
-                src="storeImages/beer.png"
-                alt="beer"
-                class="cssClassImage"
-              />
+              <img src="storeImages/beer.png" alt="beer" />
             </td>
             <td>
               <a
@@ -91,15 +79,11 @@
               >
             </td>
             <td>To protect us from going insane</td>
-            <td>€15</td>
+            <td class="price">€15</td>
           </tr>
           <tr id="product5" class="product">
             <td>
-              <img
-                src="storeImages/chicken.png"
-                alt="chicken"
-                class="cssClassImage"
-              />
+              <img src="storeImages/chicken.png" alt="chicken" />
             </td>
             <td>
               <a
@@ -108,73 +92,88 @@
                 >Motorcycle Chicken Holder</a
               >
             </td>
-            <td>Every home should have one</td>
-            <td>€30 - Worth it</td>
+            <td>Just because</td>
+            <td class="price">€30</td>
           </tr>
         </tbody>
       </table>
     </div>
+
     <div id="messageBoardSection">
       <h2>Tell us how we are doing! Leave a message</h2>
       <textarea name="message" id="" cols="30" rows="10"></textarea>
     </div>
+
     <footer id="footer" onclick="changeFooter()">
       Find us on 21 Harcourt Street Dublin
     </footer>
+
     <script lang="text/javascript">
+      //Selecting Elements
+            let h1 = document.getElementById("h1")
+            let body = document.getElementsByTagName("body")[0]
+            let amazonLinks = document.getElementsByTagName("a")
+            let images = document.getElementsByTagName("img")
+            let footer = document.getElementById("footer");
+            let prices = document.getElementsByClassName("price")
 
-            //Selecting Elements
-                  let h1 = document.getElementById("h1")
-                  let body = document.getElementsByTagName("body")[0]
-                  let amazonLinks = document.getElementsByTagName("a")
-                  let images = document.getElementsByTagName("img")
-                  let footer = document.getElementById("footer");
-
-            //Functions
-                  const changeH1Text = function(){
-                    h1.innerText = "Barry's Happy Happy Summer Store"
-                  }
-                  const changeBackgroundColor = function(){
-                    body.style.backgroundColor = "yellow"
-                  }
-
-                  const changeFooter = function(){
-      footer.innerText="Find us on 420 Sixty Nine Street, Las Vegas"
-                  }
-
-                  const addClassToLinks = function(){
-                    for(let link of amazonLinks){
-                      link.classList.add("cssClassLink")
-                    }
-                  }
-                  const toggleImage = function(){
-                    for(let image of images){
-                      image.classList.toggle("cssClassImage")
-                    }
-                  }
-
-              //Styling
-              const changeImageSize = function(){
-                for(image of images){
-                  image.style.width="300px";
-                }
+      //Functions
+            const changeH1Text = function(){
+              h1.innerText = "Barry's Happy Happy Summer Store"
+            }
+            const changeBackgroundColor = function(){
+              body.style.backgroundColor = "yellow"
+            }
+            const changeFooter = function(){
+              footer.innerText="Find us on 420 Sixty Nine Street, Las Vegas"
+            }
+            const addClassToLinks = function(){
+              for(let link of amazonLinks){
+                link.classList.add("cssClassLink")
               }
-              const addSomeStyle = function(){
-                body.style.textAlign ="center"
-                footer.style.fontSize = "20px"
-                footer.style.fontWeight = "bold"
+            }
+            const toggleImage = function(){
+              for(let image of images){
+                image.classList.toggle("cssClassImage")
               }
+            }
 
-              changeImageSize();
-              addSomeStyle()
+            const changePriceColor = function(){
+              let colorArray = ["Black", "Aqua", "Aquamarine", "Azure", "White", "SlateBlue", "Red"]
+              let randomNumber = Math.floor(Math.random()*7)
+              for(let price of prices){
+                price.style.color = colorArray[randomNumber]
+              }
+            }
+
+        //Styling
+        const changeImageSize = function(){
+          for(image of images){
+            image.style.width="300px";
+          }
+        }
+        const addSomeStyle = function(){
+          body.style.textAlign ="center"
+          body.style.fontFamily = "Arial"
+          body.style.fontSize = "20px"
+          footer.style.fontSize = "20px"
+          footer.style.fontWeight = "bold"
+        }
+
+        changeImageSize();
+        addSomeStyle()
+        toggleImage()
 
 
-             //Welcome function invokes all the functions
-                  const welcome = function(){
-                  changeH1Text()
-                  addClassToLinks()
-                  changeBackgroundColor()
-                  toggleImage()}
+
+       //Welcome function invokes all the functions
+            const welcome = function(){
+            changeH1Text()
+            addClassToLinks()
+            changeBackgroundColor()
+            toggleImage()
+            changePriceColor()
+          }
     </script>
   </body>
 </html>
