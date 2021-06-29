@@ -15,6 +15,7 @@
     <h1 id="h1">Barry's Sad, Sad Winter Store</h1>
 
     <button onclick="welcome()">Welcome</button>
+
     <div id="container">
       <h2>Our Best Selling Products</h2>
       <table id="table">
@@ -59,7 +60,7 @@
                 >Sunscreen</a
               >
             </td>
-            <td>To protect our beautiful eyes</td>
+            <td>To protect our beautiful skin</td>
             <td>€5</td>
           </tr>
           <tr id="product3" class="product">
@@ -89,7 +90,7 @@
                 >Beer</a
               >
             </td>
-            <td>To keep us sane</td>
+            <td>To protect us from going insane</td>
             <td>€15</td>
           </tr>
           <tr id="product5" class="product">
@@ -138,7 +139,7 @@
                   }
 
                   const changeFooter = function(){
-      footer.innerText="Really you can find us on 420 Sixty Nine Street, Las Vegas"
+      footer.innerText="Find us on 420 Sixty Nine Street, Las Vegas"
                   }
 
                   const addClassToLinks = function(){
@@ -152,6 +153,23 @@
                     }
                   }
 
+              //Styling
+              const changeImageSize = function(){
+                for(image of images){
+                  image.style.width="300px";
+                }
+              }
+              const addSomeStyle = function(){
+                body.style.textAlign ="center"
+                footer.style.fontSize = "20px"
+                footer.style.fontWeight = "bold"
+              }
+
+              changeImageSize();
+              addSomeStyle()
+
+
+             //Welcome function invokes all the functions
                   const welcome = function(){
                   changeH1Text()
                   addClassToLinks()
