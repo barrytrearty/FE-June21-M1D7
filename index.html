@@ -5,102 +5,158 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Amazing Shop</title>
-    <!-- <style></style> -->
+    <style>
+      .cssClassImage {
+        visibility: hidden;
+      }
+    </style>
   </head>
   <body>
     <h1 id="h1">Barry's Sad, Sad Winter Store</h1>
-    <button onclick="changeH1Text()"></button>
+
+    <button onclick="welcome()">Welcome</button>
     <div id="container">
       <h2>Our Best Selling Products</h2>
       <table id="table">
-        <tr id="tableHeader">
-          <th>Image</th>
-          <th>Title</th>
-          <th>Description</th>
-          <th>Price</th>
-        </tr>
-        <tr id="product1" class="product">
-          <td><img src="storeImages/sunglasses.png" alt="sunglasses" /></td>
-          <td>
-            <a
-              href="https://www.amazon.com/Polarized-Sunglasses-Protection-Driving-Fishing/dp/B07VPGVZ52/ref=pd_di_sccai_1/142-5525774-0587315?pd_rd_w=AqxD9&pf_rd_p=c9443270-b914-4430-a90b-72e3e7e784e0&pf_rd_r=TWT48ABNK543ZMQSRPC2&pd_rd_r=170ca2a7-f480-4caa-ab02-79f3114739b5&pd_rd_wg=u7TqJ&pd_rd_i=B07VPGVZ52&psc=1"
-              target="_blank"
-              >Sunglasses</a
-            >
-          </td>
-          <td>To protect our beautiful eyes</td>
-          <td>€20</td>
-        </tr>
-        <tr id="product2" class="product">
-          <td><img src="storeImages/sunscreen.png" alt="sunscreen" /></td>
+        <tbody>
+          <tr id="tableHeader">
+            <th>Image</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Price</th>
+          </tr>
+          <tr id="product1" class="product">
+            <td>
+              <img
+                src="storeImages/sunglasses.png"
+                alt="sunglasses"
+                class="cssClassImage"
+              />
+            </td>
+            <td>
+              <a
+                href="https://www.amazon.com/Polarized-Sunglasses-Protection-Driving-Fishing/dp/B07VPGVZ52/ref=pd_di_sccai_1/142-5525774-0587315?pd_rd_w=AqxD9&pf_rd_p=c9443270-b914-4430-a90b-72e3e7e784e0&pf_rd_r=TWT48ABNK543ZMQSRPC2&pd_rd_r=170ca2a7-f480-4caa-ab02-79f3114739b5&pd_rd_wg=u7TqJ&pd_rd_i=B07VPGVZ52&psc=1"
+                target="_blank"
+                >Sunglasses</a
+              >
+            </td>
+            <td>To protect our beautiful eyes</td>
+            <td>€20</td>
+          </tr>
+          <tr id="product2" class="product">
+            <td>
+              <img
+                src="storeImages/sunscreen.png"
+                alt="sunscreen"
+                class="cssClassImage"
+              />
+            </td>
 
-          <td>
-            <a
-              href="https://www.amazon.com/Coppertone-Sunscreen-Lotion-Spectrum-Ounces/dp/B0173G3ANM/ref=sr_1_4_sspa?crid=36MRGYOSJG7CK&dchild=1&keywords=sunscreen&qid=1624969615&sprefix=suns%2Caps%2C286&sr=8-4-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUEyQjJMRVJMQ0tCNDk1JmVuY3J5cHRlZElkPUEwODgxMzg1NUxHTFA3RDkwQTJDJmVuY3J5cHRlZEFkSWQ9QTAyOTI0MTIzOUFVWEVVTzlVMU1OJndpZGdldE5hbWU9c3BfYXRmJmFjdGlvbj1jbGlja1JlZGlyZWN0JmRvTm90TG9nQ2xpY2s9dHJ1ZQ=="
-              target="_blank"
-              >Sunscreen</a
-            >
-          </td>
-          <td>To protect our beautiful eyes</td>
-          <td>€5</td>
-        </tr>
-        <tr id="product3" class="product">
-          <td><img src="storeImages/cap.png" alt="cap" /></td>
-          <td>
-            <a
-              href="https://www.amazon.com/Liverpool-Red-Crest-Cap-Merchandise/dp/B07SJ7WHQ9/ref=sr_1_4?dchild=1&keywords=liverpool+cap&qid=1624969798&sr=8-4"
-              >Hat</a
-            >
-          </td>
-          <td>To protect our heads</td>
-          <td>€12</td>
-        </tr>
-        <tr id="product4" class="product">
-          <td><img src="storeImages/beer.png" alt="beer" /></td>
-          <td>
-            <a
-              href="https://www.amazon.com/Heineken-12-bottles-5-ABV/dp/B0017JJ4DM/ref=sr_1_13?dchild=1&keywords=beer&qid=1624969450&sr=8-13"
-              >Beer</a
-            >
-          </td>
-          <td>To keep us sane</td>
-          <td>€15</td>
-        </tr>
-        <tr id="product5" class="product">
-          <td><img src="storeImages/chicken.png" alt="chicken" /></td>
-          <td>
-            <a
-              href="https://www.amazon.com/Portable-American-Motorcycle-Stainless-%EF%BC%88Five-pointed/dp/B094F74LWV/ref=sr_1_5?crid=JCE0KB4ENYN9&dchild=1&keywords=motorcycle+beer+can+chicken+holder&qid=1624969662&sprefix=motorcycle+beer+%2Caps%2C299&sr=8-5"
-              target="_blank"
-              >Motorcycle Chicken Holder</a
-            >
-          </td>
-          <td>Every home should have one</td>
-          <td>€30 - Worth it</td>
-        </tr>
+            <td>
+              <a
+                href="https://www.amazon.com/Coppertone-Sunscreen-Lotion-Spectrum-Ounces/dp/B0173G3ANM/ref=sr_1_4_sspa?crid=36MRGYOSJG7CK&dchild=1&keywords=sunscreen&qid=1624969615&sprefix=suns%2Caps%2C286&sr=8-4-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUEyQjJMRVJMQ0tCNDk1JmVuY3J5cHRlZElkPUEwODgxMzg1NUxHTFA3RDkwQTJDJmVuY3J5cHRlZEFkSWQ9QTAyOTI0MTIzOUFVWEVVTzlVMU1OJndpZGdldE5hbWU9c3BfYXRmJmFjdGlvbj1jbGlja1JlZGlyZWN0JmRvTm90TG9nQ2xpY2s9dHJ1ZQ=="
+                target="_blank"
+                >Sunscreen</a
+              >
+            </td>
+            <td>To protect our beautiful eyes</td>
+            <td>€5</td>
+          </tr>
+          <tr id="product3" class="product">
+            <td>
+              <img src="storeImages/cap.png" alt="cap" class="cssClassImage" />
+            </td>
+            <td>
+              <a
+                href="https://www.amazon.com/Liverpool-Red-Crest-Cap-Merchandise/dp/B07SJ7WHQ9/ref=sr_1_4?dchild=1&keywords=liverpool+cap&qid=1624969798&sr=8-4"
+                >Hat</a
+              >
+            </td>
+            <td>To protect our heads</td>
+            <td>€12</td>
+          </tr>
+          <tr id="product4" class="product">
+            <td>
+              <img
+                src="storeImages/beer.png"
+                alt="beer"
+                class="cssClassImage"
+              />
+            </td>
+            <td>
+              <a
+                href="https://www.amazon.com/Heineken-12-bottles-5-ABV/dp/B0017JJ4DM/ref=sr_1_13?dchild=1&keywords=beer&qid=1624969450&sr=8-13"
+                >Beer</a
+              >
+            </td>
+            <td>To keep us sane</td>
+            <td>€15</td>
+          </tr>
+          <tr id="product5" class="product">
+            <td>
+              <img
+                src="storeImages/chicken.png"
+                alt="chicken"
+                class="cssClassImage"
+              />
+            </td>
+            <td>
+              <a
+                href="https://www.amazon.com/Portable-American-Motorcycle-Stainless-%EF%BC%88Five-pointed/dp/B094F74LWV/ref=sr_1_5?crid=JCE0KB4ENYN9&dchild=1&keywords=motorcycle+beer+can+chicken+holder&qid=1624969662&sprefix=motorcycle+beer+%2Caps%2C299&sr=8-5"
+                target="_blank"
+                >Motorcycle Chicken Holder</a
+              >
+            </td>
+            <td>Every home should have one</td>
+            <td>€30 - Worth it</td>
+          </tr>
+        </tbody>
       </table>
     </div>
     <div id="messageBoardSection">
       <h2>Tell us how we are doing! Leave a message</h2>
       <textarea name="message" id="" cols="30" rows="10"></textarea>
     </div>
-    <footer></footer>
+    <footer id="footer" onclick="changeFooter()">
+      Find us on 21 Harcourt Street Dublin
+    </footer>
     <script lang="text/javascript">
 
-      let h1 = document.getElementById("h1")
+            //Selecting Elements
+                  let h1 = document.getElementById("h1")
+                  let body = document.getElementsByTagName("body")[0]
+                  let amazonLinks = document.getElementsByTagName("a")
+                  let images = document.getElementsByTagName("img")
+                  let footer = document.getElementById("footer");
 
-      const changeH1Text = function(){
-        h1.innerText = "Barry's Happy Summer Store"
-      }
+            //Functions
+                  const changeH1Text = function(){
+                    h1.innerText = "Barry's Happy Happy Summer Store"
+                  }
+                  const changeBackgroundColor = function(){
+                    body.style.backgroundColor = "yellow"
+                  }
 
-              //Create the Div
-            // let newDiv = document.createElement("div")
+                  const changeFooter = function(){
+      footer.innerText="Really you can find us on 420 Sixty Nine Street, Las Vegas"
+                  }
 
-            // newDiv.innerText = `Hello, it's (${(new Date()).getHours()}:${(new Date()).getMinutes()}:${(new Date()).getSeconds()})`
-            // console.log(newDiv);
+                  const addClassToLinks = function(){
+                    for(let link of amazonLinks){
+                      link.classList.add("cssClassLink")
+                    }
+                  }
+                  const toggleImage = function(){
+                    for(let image of images){
+                      image.classList.toggle("cssClassImage")
+                    }
+                  }
 
-            // let container = document.getElementById("container")
-            // container.appendChild(newDiv)
+                  const welcome = function(){
+                  changeH1Text()
+                  addClassToLinks()
+                  changeBackgroundColor()
+                  toggleImage()}
     </script>
   </body>
 </html>
