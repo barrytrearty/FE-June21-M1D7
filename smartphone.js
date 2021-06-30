@@ -118,9 +118,12 @@ const welcome = function () {
   //  addSomeStyle()
 };
 
+//Comment section
+
 const textArea = document.getElementById("text-area");
 const userInput = document.getElementById("user-name");
 const submit = document.getElementById("submit");
+const messageBoardSection = document.getElementById("messageBoardSection");
 
 const censorMessages = function (message) {
   if (message.includes("terrible")) {
@@ -129,16 +132,23 @@ const censorMessages = function (message) {
   }
 };
 
+const postComment = function (username, comment) {
+  const newComment = document.createElement("div");
+  newComment.innerHTML = `<h5>${username}</h5><p>${comment}</p>`;
+  messageBoardSection.appendChild(newComment);
+};
+
 const logMessages = function () {
   let messageContent = textArea.value;
   let userName = userInput.value;
 
   let finalMessage = censorMessages(messageContent);
-
-  console.log(userName, finalMessage);
+  postComment(userName, finalMessage);
 };
 
 submit.addEventListener("click", logMessages);
+
+//Render Description
 
 const phoneBoxContainer = document.getElementById("phone-box-container");
 const galaxyActive = document.getElementById("galaxy-active");
