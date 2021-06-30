@@ -6,12 +6,17 @@ body {
   visibility: hidden;
 }
 
+/* #container {
+  display: grid;
+} */
+
 #phone-box-container {
   /* display: grid; */
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
+  margin-top: 70px;
 }
 
 .phone-box {
@@ -19,7 +24,7 @@ body {
   text-align: center;
   background-color: white;
   margin: auto;
-  margin-bottom: 50px;
+  margin-bottom: 77px;
   transition: transform 1s;
 }
 
@@ -37,12 +42,57 @@ h4 {
   font-size: 20px;
 }
 
-.phone-box:hover {
+/* .phone-box:hover { */
+.home:hover {
   color: white;
   background-color: rgba(0, 0, 0, 0.5);
-  transform: translateY(-50%);
+  transform: translateY(-10%);
+}
+
+.phone-box.clicked {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* .clicked-phone {
+  margin: auto;
+  width: 80%;
+  display: grid;
+} */
+
+.clicked-phone {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 70px;
+}
+
+.description-clicked {
+  width: 50%;
+  /* align-self: center; */
+  text-align: left;
+}
+
+/* .description-clicked h4 {
+  text-align: center;
+} */
+
+.hidden {
+  visibility: hidden;
+}
+
+#phone-box-container,
+#galaxy-active,
+#iphone-active,
+#oppo-active,
+#xiaomi-active,
+#nokia-active,
+#huawei-active {
+  grid-column: 1;
+  grid-row: 1;
 }
 
 /* .phone-box-click {
     transform: translateX(-100%);
-  } */
+  } */ ;

@@ -117,3 +117,41 @@ const welcome = function () {
   //  toggleImage()
   //  addSomeStyle()
 };
+
+const textArea = document.getElementById("text-area");
+const userInput = document.getElementById("user-name");
+const submit = document.getElementById("submit");
+
+const censorMessages = function (message) {
+  if (message.includes("terrible")) {
+    message = message.replace("terrible", "great");
+    return message;
+  }
+};
+
+const logMessages = function () {
+  let messageContent = textArea.value;
+  let userName = userInput.value;
+
+  let finalMessage = censorMessages(messageContent);
+
+  console.log(userName, finalMessage);
+};
+
+submit.addEventListener("click", logMessages);
+
+const phoneBoxContainer = document.getElementById("phone-box-container");
+const galaxyActive = document.getElementById("galaxy-active");
+const iphoneActive = document.getElementById("iphone-active");
+const oppoActive = document.getElementById("oppo-active");
+const xiaomiActive = document.getElementById("xiaomi-active");
+const nokiaActive = document.getElementById("nokia-active");
+const huaweiActive = document.getElementById("huawei-active");
+
+// iphoneActive.classList.add("hidden");
+// galaxyActive.classList.add("hidden");
+// oppoActive.classList.add("hidden");
+// xiaomiActive.classList.add("hidden");
+// nokiaActive.classList.add("hidden");
+// huaweiActive.classList.add("hidden");
+// phoneBoxContainer.classList.add("hidden");
