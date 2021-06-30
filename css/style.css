@@ -1,0 +1,39 @@
+.cssClassImage {
+  visibility: hidden;
+}
+
+#phone-box-container {
+  display: grid;
+}
+
+.phone-box {
+  width: 300px;
+  text-align: center;
+  background-color: white;
+  margin: auto;
+  transition: transform 1s;
+}
+
+.phone-box img {
+  height: 100%;
+  width: auto;
+  color: black;
+  background-color: white;
+}
+
+.phone-box h3,
+h4 {
+  margin: 0;
+  padding: 5px;
+  font-size: 20px;
+}
+
+.phone-box:hover {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  transform: translateY(-50%);
+}
+
+/* .phone-box-click {
+    transform: translateX(-100%);
+  } */
