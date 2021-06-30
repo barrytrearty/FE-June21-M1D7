@@ -15,6 +15,7 @@
         text-align: center;
         background-color: white;
         margin: auto;
+        transition: transform 2s;
       }
 
       .phone-box img {
@@ -34,7 +35,12 @@
       .phone-box:hover {
         color: white;
         background-color: rgba(0, 0, 0, 0.5);
+        transform: translateX(-100%);
       }
+
+      /* .phone-box-click {
+        transform: translateX(-100%);
+      } */
     </style>
   </head>
   <body>
@@ -42,12 +48,42 @@
     <button onclick="changeBackgroundColorRandomly()">Not your vibe</button>
 
     <div id="container">
-      <h2>Our Best Selling Products</h2>
+      <h2 onclick="toggleImage()">See Our Best Selling Products</h2>
+
+      <div class="phone-box">
+        <h3>Samsung</h3>
+        <img src="storeImages/galaxy.png" alt="galaxy" />
+        <h4>€595</h4>
+      </div>
 
       <div class="phone-box">
         <h3>iPhone</h3>
         <img src="storeImages/iphone.png" alt="iphone" />
-        <h4>Price</h4>
+        <h4>€685</h4>
+      </div>
+
+      <div class="phone-box">
+        <h3>Huawei</h3>
+        <img src="storeImages/huawei.png" alt="huawei" />
+        <h4>€495</h4>
+      </div>
+
+      <div class="phone-box">
+        <h3>Xiaomi</h3>
+        <img src="storeImages/xiaomi.png" alt="xiaomi" />
+        <h4>€195</h4>
+      </div>
+
+      <div class="phone-box">
+        <h3>Oppo</h3>
+        <img src="storeImages/oppo.png" alt="oppo" />
+        <h4>€545</h4>
+      </div>
+
+      <div class="phone-box">
+        <h3>Nokia</h3>
+        <img src="storeImages/nokia.png" alt="nokia" />
+        <h4>€80</h4>
       </div>
 
       <table id="table">
@@ -239,6 +275,7 @@
 
 
 
+
          //Change price color function
                const createHexadecimalValue = function(){
                  let hexadecimels = ["0","1","2","3","4","5","6","7","8","9", "A", "B", "C", "D", "E", "F" ]
@@ -259,12 +296,17 @@
                  }
                    }
 
+
+                  //  const movePhoneBox = function(){
+                  //    phoneBox.classList.add("phone-box-click")
+                  //  }
+
                      //  const changeBackgroundColor = function(){
               //    body.style.background = "linear-gradient(360deg, #259bd1, #8b6a8a)"
               //  }
 
               const changeBackgroundColorRandomly = function(){
-                let randomBgColor = `linear-gradient(360deg, #${createHexadecimalValue()}, #${createHexadecimalValue()})`
+                let randomBgColor = `linear-gradient(90deg, #${createHexadecimalValue()}, #${createHexadecimalValue()})`
                 body.style.background = randomBgColor;
               }
 
