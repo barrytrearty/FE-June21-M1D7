@@ -42,7 +42,7 @@ const addSomeStyle = function () {
   body.style.fontSize = "20px";
   footer.style.fontSize = "20px";
   footer.style.fontWeight = "bold";
-  table.style.margin = "auto";
+  // table.style.margin = "auto";
 };
 
 const alignDescriptions = function () {
@@ -148,10 +148,78 @@ const xiaomiActive = document.getElementById("xiaomi-active");
 const nokiaActive = document.getElementById("nokia-active");
 const huaweiActive = document.getElementById("huawei-active");
 
-// iphoneActive.classList.add("hidden");
-// galaxyActive.classList.add("hidden");
-// oppoActive.classList.add("hidden");
-// xiaomiActive.classList.add("hidden");
-// nokiaActive.classList.add("hidden");
-// huaweiActive.classList.add("hidden");
+const galaxyHome = document.getElementById("galaxy-home");
+const iphoneHome = document.getElementById("iphone-home");
+const oppoHome = document.getElementById("oppo-home");
+const xiaomiHome = document.getElementById("xiaomi-home");
+const nokiaHome = document.getElementById("nokia-home");
+const huaweiHome = document.getElementById("huawei-home");
+
+const showGalaxy = function () {
+  iphoneActive.classList.add("hidden");
+  galaxyActive.classList.remove("hidden");
+  oppoActive.classList.add("hidden");
+  xiaomiActive.classList.add("hidden");
+  nokiaActive.classList.add("hidden");
+  huaweiActive.classList.add("hidden");
+};
+
+const showIphone = function () {
+  iphoneActive.classList.remove("hidden");
+  galaxyActive.classList.add("hidden");
+  oppoActive.classList.add("hidden");
+  xiaomiActive.classList.add("hidden");
+  nokiaActive.classList.add("hidden");
+  huaweiActive.classList.add("hidden");
+};
+
+const showOppo = function () {
+  iphoneActive.classList.add("hidden");
+  galaxyActive.classList.add("hidden");
+  oppoActive.classList.remove("hidden");
+  xiaomiActive.classList.add("hidden");
+  nokiaActive.classList.add("hidden");
+  huaweiActive.classList.add("hidden");
+};
+
+const showXiaomi = function () {
+  iphoneActive.classList.add("hidden");
+  galaxyActive.classList.add("hidden");
+  oppoActive.classList.add("hidden");
+  xiaomiActive.classList.remove("hidden");
+  nokiaActive.classList.add("hidden");
+  huaweiActive.classList.add("hidden");
+};
+
+const showNokia = function () {
+  iphoneActive.classList.add("hidden");
+  galaxyActive.classList.add("hidden");
+  oppoActive.classList.add("hidden");
+  xiaomiActive.classList.add("hidden");
+  nokiaActive.classList.remove("hidden");
+  huaweiActive.classList.add("hidden");
+};
+
+const showHuawei = function () {
+  iphoneActive.classList.add("hidden");
+  galaxyActive.classList.add("hidden");
+  oppoActive.classList.add("hidden");
+  xiaomiActive.classList.add("hidden");
+  nokiaActive.classList.add("hidden");
+  huaweiActive.classList.remove("hidden");
+};
+
+galaxyHome.addEventListener("click", showGalaxy);
+iphoneHome.addEventListener("click", showIphone);
+nokiaHome.addEventListener("click", showNokia);
+xiaomiHome.addEventListener("click", showXiaomi);
+huaweiHome.addEventListener("click", showHuawei);
+oppoHome.addEventListener("click", showOppo);
+
+iphoneActive.classList.add("hidden");
+galaxyActive.classList.add("hidden");
+oppoActive.classList.add("hidden");
+xiaomiActive.classList.add("hidden");
+nokiaActive.classList.add("hidden");
+huaweiActive.classList.add("hidden");
 // phoneBoxContainer.classList.add("hidden");
