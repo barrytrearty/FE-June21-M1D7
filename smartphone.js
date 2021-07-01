@@ -123,18 +123,33 @@ const welcome = function () {
 const textArea = document.getElementById("text-area");
 const userInput = document.getElementById("user-name");
 const submit = document.getElementById("submit");
+const prompt = document.getElementById("feedback-prompt");
 const messageBoardSection = document.getElementById("messageBoardSection");
 
 const censorMessages = function (message) {
   if (message.includes("terrible")) {
-    message = message.replace("terrible", "great");
-    return message;
+    message = message.replaceAll("terrible", "terrific");
   }
+  if (message.includes("shit")) {
+    message = message.replaceAll("shit", "sensational");
+  }
+  if (message.includes("awful")) {
+    message = message.replaceAll("awful", "awesome");
+  }
+  if (message.includes("bad")) {
+    message = message.replaceAll("bad", "great");
+  }
+  if (message.includes("horrible")) {
+    message = message.replaceAll("horrible", "fantastic");
+  }
+
+  return message;
 };
 
 const postComment = function (username, comment) {
   const newComment = document.createElement("div");
-  newComment.innerHTML = `<h5>${username}</h5><p>${comment}</p>`;
+  newComment.classList.add("comment");
+  newComment.innerHTML = `<p class="user-comment">${username}</p><p class="posted-comment">${comment}</p>`;
   messageBoardSection.appendChild(newComment);
 };
 
@@ -144,6 +159,11 @@ const logMessages = function () {
 
   let finalMessage = censorMessages(messageContent);
   postComment(userName, finalMessage);
+
+  textArea.remove();
+  userInput.remove();
+  submit.remove();
+  prompt.innerText = "Thanks for your comment!";
 };
 
 submit.addEventListener("click", logMessages);
@@ -151,12 +171,6 @@ submit.addEventListener("click", logMessages);
 //Render Description
 
 const phoneBoxContainer = document.getElementById("phone-box-container");
-const galaxyActive = document.getElementById("galaxy-active");
-const iphoneActive = document.getElementById("iphone-active");
-const oppoActive = document.getElementById("oppo-active");
-const xiaomiActive = document.getElementById("xiaomi-active");
-const nokiaActive = document.getElementById("nokia-active");
-const huaweiActive = document.getElementById("huawei-active");
 
 const galaxyHome = document.getElementById("galaxy-home");
 const iphoneHome = document.getElementById("iphone-home");
@@ -164,6 +178,29 @@ const oppoHome = document.getElementById("oppo-home");
 const xiaomiHome = document.getElementById("xiaomi-home");
 const nokiaHome = document.getElementById("nokia-home");
 const huaweiHome = document.getElementById("huawei-home");
+
+const phoneBoxes = document.getElementsByClassName("home");
+
+const galaxyActive = document.getElementById("galaxy-active");
+const iphoneActive = document.getElementById("iphone-active");
+const oppoActive = document.getElementById("oppo-active");
+const xiaomiActive = document.getElementById("xiaomi-active");
+const nokiaActive = document.getElementById("nokia-active");
+const huaweiActive = document.getElementById("huawei-active");
+
+//Trying to implement select day
+const getCurrentlySelectedPhone = function () {
+  return document.querySelector(".selected");
+};
+
+galaxyHome.addEventListener("click", function () {
+  galaxyHome.classList.add("selected");
+});
+
+// const currentlySelectedPhoneNode = getCurrentlySelectedPhone() // Looking for any "selected" day in the page
+//   if (currentlySelectedPhoneNode !== null) { // If there is any selected day...
+//       currentlySelectedPhoneNode.classList.remove("selected") // ...we remove the "selected" class from it
+//   }
 
 const showGalaxy = function () {
   iphoneActive.classList.add("hidden");
@@ -233,3 +270,20 @@ xiaomiActive.classList.add("hidden");
 nokiaActive.classList.add("hidden");
 huaweiActive.classList.add("hidden");
 // phoneBoxContainer.classList.add("hidden");
+
+//  To do: Tidy up js
+//  To do: ensure all requirements are met
+//  To do: increase comment section censor functionality
+//  To do: add in Daniele selectDay function for active phone
+//  To do: use createMeeting function for comment section
+//  To do: use local storage to store comments
+
+// const selectDay = function(event){
+//   // DESELECT THE CURRENTLY SELECTED DAY
+//   const currentlySelectedDayNode = getCurrentlySelectedDay() // Looking for any "selected" day in the page
+//   if (currentlySelectedDayNode !== null) { // If there is any selected day...
+//       currentlySelectedDayNode.classList.remove("selected") // ...we remove the "selected" class from it
+//   }
+// const getCurrentlySelectedDay = function(){
+//   return document.querySelector(".selected")
+// }

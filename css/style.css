@@ -4,6 +4,7 @@ html {
 
 body {
   display: grid;
+  font-family: "Nunito Sans", sans-serif;
 }
 
 .cssClassImage {
@@ -91,6 +92,13 @@ h4 {
   visibility: hidden;
 }
 
+footer {
+  background-color: #cfc1cf;
+  padding: 10px;
+  margin: 0px;
+  margin-top: 50px;
+}
+
 /* #phone-box-container,
 #galaxy-active,
 #iphone-active,
@@ -129,6 +137,77 @@ h4 {
   flex-wrap: wrap;
   margin-top: 70px;
 }
+
+#messageBoardSection {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  width: 80%;
+  /* height: 400px; */
+  margin: auto;
+  display: grid;
+  /* border-radius: 5px; */
+}
+
+#messageBoardSection input {
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 5px;
+  box-shadow: 2px 2px black;
+}
+
+textarea {
+  resize: none;
+  height: 100px;
+  border-radius: 5px;
+  box-shadow: 2px 2px black;
+}
+
+.button {
+  /* margin-top: 20px; */
+  display: flex;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border-style: solid;
+  border-color: black;
+  box-shadow: 2px 3px black;
+  background-color: #8efbcf;
+  padding: 10px;
+  /* font-size: 1rem; */
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.button:active {
+  box-shadow: -2px -3px black;
+}
+
+.comment {
+  background-color: #8efbcf;
+  text-align: left;
+  border-style: solid;
+  border-width: 1px;
+  margin: 5px;
+}
+
+.user-comment {
+  margin: 10px;
+  font-weight: bold;
+}
+
+.posted-comment {
+  font-weight: 500;
+  margin: 10px;
+}
+
+/* 
+.submit {
+  float: left;
+} */
+
 /* .phone-box-click {
     transform: translateX(-100%);
-  } */ ;
+  } */
+
+/* To do: style buttons */
+/* To do: style comment section */

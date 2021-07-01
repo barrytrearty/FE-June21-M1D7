@@ -9,8 +9,8 @@
   </head>
   <body>
     <h1 id="h1">The Sad, Sad Smartphone Store</h1>
-    <button onclick="changeBackgroundColorRandomly()">Not your vibe</button>
-    <button onclick="changePriceColor()">
+    <button class="button" onclick="changeBackgroundColorRandomly()">Not your vibe</button>
+    <button class="button" onclick="changePriceColor()">
       Change Price. Only the Color! Not the amount!
     </button>
 
@@ -191,10 +191,13 @@
               > -->
 
     <div id="messageBoardSection">
-      <h2>Tell us how we are doing! Leave a message</h2>
-      <input type="text" id="user-name" placeholder="Your name" />
-      <textarea name="message" id="text-area" cols="30" rows="10"></textarea>
-      <button id="submit">Submit</button>
+      <h2 id="feedback-prompt">Tell us how we are doing!</h2>
+      <input type="text" id="user-name" placeholder="Name" />
+      <textarea name="message" id="text-area" placeholder="Leave a comment" cols="30" rows="10"></textarea>
+      <button id="submit" class="submit button">Submit</button>
+      <div class="comment">
+      <p class="user-comment">Ken Johnson</p><p class="posted-comment">Sensational store. The staff were awesome and the phone was great</p></div>
+    <div class="comment">  <p class="user-comment">Karen B</p><p class="posted-comment">The phone I bought here was absolutely fantastic. Never again.</p></div>
     </div>
 
     <footer id="footer" onclick="changeFooter()">
@@ -206,9 +209,3 @@
 </html>
 
 <!-- #8EFBCF -->
-
-<!-- Tidy up js -->
-<!-- style buttons -->
-<!-- ensure all requirements are met -->
-<!-- style comment section -->
-<!-- increase comment section censor functionality -->
