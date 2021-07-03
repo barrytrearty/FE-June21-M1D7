@@ -149,7 +149,7 @@ const censorMessages = function (message) {
 const postComment = function (username, comment) {
   const newComment = document.createElement("div");
   newComment.classList.add("comment");
-  newComment.innerHTML = `<p class="user-comment">${username}</p><p class="posted-comment">${comment}</p>`;
+  newComment.innerHTML = `<span class="user-comment">${username}</span><p class="posted-comment">${comment}</p>`;
   messageBoardSection.appendChild(newComment);
 };
 
@@ -181,6 +181,10 @@ const huaweiHome = document.getElementById("huawei-home");
 
 const phoneBoxes = document.getElementsByClassName("home");
 
+// const phoneDescriptionContainer = document.getElementById(
+//   "phone-description-container"
+// );
+
 const galaxyActive = document.getElementById("galaxy-active");
 const iphoneActive = document.getElementById("iphone-active");
 const oppoActive = document.getElementById("oppo-active");
@@ -189,13 +193,52 @@ const nokiaActive = document.getElementById("nokia-active");
 const huaweiActive = document.getElementById("huawei-active");
 
 //Trying to implement select day
-const getCurrentlySelectedPhone = function () {
-  return document.querySelector(".selected");
-};
+// const getCurrentlySelectedPhone = function () {
+//   return document.querySelector(".selected");
+// };
 
-galaxyHome.addEventListener("click", function () {
-  galaxyHome.classList.add("selected");
-});
+// //Still Trying
+// nokiaHome.addEventListener("click", function () {
+//   nokiaHome.classList.add("selected");
+//   const newPhoneDesc = phoneDescriptionContainer.appendChild("div");
+//   newPhoneDesc.innerHTML = `<div class="phone-box clicked">
+//   <h3>Nokia</h3>
+//   <img src="storeImages/nokia.png" alt="nokia" />
+//   <h4 class="price">€80</h4>
+// </div>
+// <div class="description-clicked">
+//   <h4>About:</h4>
+//   <p>The OG. What else needs to be said. Even has Snake game.</p>
+//   <a href="">SHOP NOW</a>
+// </div>`;
+// });
+
+/*
+const createPhoneDescriptionContainer = function (phone) {
+  let phoneAbout;
+  if (phone == "galaxy") {
+    let phoneAbout = `<p>
+    The Samsung Galaxy combines streamlined design aesthetics with
+    classic colours. With its refined curves, it makes it comfortable
+    to hold and provides easy screen navigation.
+  </p>`;
+  }
+
+  let phoneDescriptionContainer = createElement("div");
+  phoneDescriptionContainer.id = "phone-description-container";
+  phoneDescriptionContainer.innerHTML = `<div id="${phone}-active" class="clicked-phone">
+  <div class="phone-box clicked">
+    <h3>${phone}</h3>
+    <img src="storeImages/${phone}.png" alt="galaxy" />
+    <h4 class="price">€595</h4>
+  </div>
+  <div class="description-clicked">
+    <h4>About:</h4>
+   ${phoneAbout}
+    <a href="">SHOP NOW</a>
+  </div>
+</div>`;
+};*/
 
 // const currentlySelectedPhoneNode = getCurrentlySelectedPhone() // Looking for any "selected" day in the page
 //   if (currentlySelectedPhoneNode !== null) { // If there is any selected day...
@@ -269,6 +312,8 @@ oppoActive.classList.add("hidden");
 xiaomiActive.classList.add("hidden");
 nokiaActive.classList.add("hidden");
 huaweiActive.classList.add("hidden");
+
+showGalaxy();
 // phoneBoxContainer.classList.add("hidden");
 
 //  To do: Tidy up js

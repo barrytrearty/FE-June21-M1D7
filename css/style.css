@@ -4,7 +4,9 @@ html {
 
 body {
   display: grid;
-  font-family: "Nunito Sans", sans-serif;
+  /* font-family: "Nunito Sans", sans-serif; */
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 
 .cssClassImage {
@@ -166,6 +168,7 @@ textarea {
   /* margin-top: 20px; */
   display: flex;
   margin: auto;
+  border-radius: 10px;
   margin-top: 10px;
   margin-bottom: 20px;
   border-style: solid;
